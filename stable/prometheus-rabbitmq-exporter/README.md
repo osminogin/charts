@@ -46,6 +46,7 @@ The following table lists the configurable parameters and their default values.
 | `image.repository`       | prometheus-rabbitmq-exporter image repository                          | `kbudde/rabbitmq-exporter`|
 | `image.tag`              | prometheus-rabbitmq-exporter image tag                                 | `v0.29.0`                 |
 | `image.pullPolicy`       | image pull policy                                                      | `IfNotPresent`            |
+| `image.pullSecrets`      | image pull secrets                                                     | `[]`            |
 | `service.type`           | desired service type                                                   | `ClusterIP`               |
 | `service.internalport`   | service listening port                                                 | `9419`                    |
 | `service.externalPort`   | public service port                                                    | `9419`                    |

@@ -6,6 +6,8 @@ image:
   repository: kbudde/rabbitmq-exporter
   tag: v0.29.0
   pullPolicy: IfNotPresent
+imagePullSecrets: []
+  # - name: mySecretName
 service:
   type: ClusterIP
   externalPort: 9419
@@ -57,6 +59,3 @@ prometheus:
     additionalLabels: {}
     interval: 15s
     namespace: []
-  rules:
-    enabled: false
-    additionalLabels: {}
