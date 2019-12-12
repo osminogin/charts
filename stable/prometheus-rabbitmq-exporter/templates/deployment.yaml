@@ -70,15 +70,15 @@ spec:
               value: "{{ .Values.rabbitmq.max_queues }}"
           ports:
             - containerPort: {{ .Values.service.internalPort }}
-              name: publish
+              name: metrics
           livenessProbe:
             httpGet:
               path: /
-              port: publish
+              port: metrics
           readinessProbe:
             httpGet:
               path: /
-              port: publish
+              port: metrics
           resources:
 {{ toYaml .Values.resources | indent 12 }}
           securityContext:
